@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+       <style>
+       #resultado{
+           width: 150px;
+           height: 150px;
+       }
+       </style>
+    </head>
+    <body>
+            <input type="text" id="a" />Valor de a
+            <input type="text" id="b" />Valor de b
+            <input type="text" id="c" />Valor de c
+            <button type="button" class="btn btn-primary" id="cal" onclick="ref()">Calcular</button>
+            <textarea class="form-control" id="resultado"  rows="3"></textarea>
+    </body>
+    <script>
+    function ref(){ 
+    var va = document.getElementById('a').value;
+    var vb = document.getElementById('b').value;
+    var vc = document.getElementById('c').value;
+    var texto= "";
+    var a = parseInt(va);
+    var b = parseInt(vb);
+    var c = parseInt(vc);
+    var discriminante = b*b-(4*a*c);
+    if(a == 0 && b == 0 && c == 0){
+    
+        document.getElementById('resultado').innerHTML="coeficientes nulos";
+    }else if(discriminante == 0){
+        x = (-1)*b/(2*a);
+        document.getElementById('resultado').innerHTML="existe una raiz doble de valor"+x;
+
+    }else if(discriminante > 0){
+        discriminante =Math.sqrt(discriminante);
+        x = (((-1)*b + discriminante)/2*a).toFixed(2);
+        y = (((-1)*b - discriminante)/2*a).toFixed(2);
+        document.getElementById('resultado').innerHTML="las raices son : \n"+ x +"\n "+ y;
+    }else{
+        x = (-1)*b/(2*a);
+        var rCompleja = Math.sqrt(((-1)*discriminante)/(2*a));
+        document.getElementById('resultado').innerHTML="las raices son imaginarias: \n"+x + "+" +rCompleja + " \n" + x +"-"+ rCompleja;
+    }
+    
+    }
+    </script>
+</html>

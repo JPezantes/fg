@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+       <style>
+       #imagen{
+           background-image: url("https://i.blogs.es/ec682c/autos-mas-vendidos-2018/450_1000.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+           width: 1500px;
+           height: 1500px;
+       }
+       </style>
+    </head>
+    <body>
+        <form>
+                <select id="sel" onchange="im()">
+
+                        <option value="1">Volvo</option>
+                        <option value="2">Saab</option>
+                        <option value="3">Mercedes</option>
+                        <option value="4">Audi</option>
+                      </select>
+        </form>
+        <div id="imagen">
+        
+
+        </div>
+        <script>
+       
+        function im(){
+          var select = document.getElementById("sel");
+          var v = select.value;
+          var imagen = document.getElementById('imagen');
+          if(v == 1){
+              imagen.style.backgroundImage = 'url("https://cochesnuevos.autofacil.es/img/VOLVO_XC40.jpg")';
+          }
+          if(v == 2){
+            imagen.style.backgroundImage = 'url("https://pictures.dealer.com/p/parkavenuelotus/1044/690b3a786547e432d19c88e5a57f374cx.jpg")';
+          }
+          if(v == 3){
+            imagen.style.backgroundImage = 'url("https://cdn.motor1.com/images/mgl/NmLJG/s1/mercedes-s-class-coupe-exclusive-edition.jpg")';
+          }
+          if(v == 4){
+            imagen.style.backgroundImage = 'url("https://cdn.gearpatrol.com/wp-content/uploads/2019/01/Complete-Audi-Buying-Guide-gear-patrol-lead-full.jpg")';
+          }
+        }
+        </script>
+    </body>
+    </html>

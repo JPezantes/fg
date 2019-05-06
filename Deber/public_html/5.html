@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+       <style>
+       #resultado{
+           width: 1500px;
+           height: 1500px;
+       }
+       </style>
+    </head>
+    <body>
+            <button type="button" class="btn btn-primary" id="cal" onclick="ref()">Calcular</button>
+            <textarea class="form-control" id="resultado"  rows="3"></textarea>
+    </body>
+    <script>
+        function ref(){ 
+        var farenheit, celcius;
+        var s= "";
+        
+        for(i=-2;i<=12;i++){
+            celcius =10*i; farenheit=32+(celcius*9)/5;
+            s = s +"C="+ celcius+" F=" + farenheit+"\n";
+            
+            if (celcius==0) s =s+"Punto Congelacion del agua\n";
+            if  (celcius == 100) s = s +"Punto de Ebullicion del agua \n";
+
+        }
+        
+        document.getElementById('resultado').innerHTML = s;
+        }
+    </script>
+</html>

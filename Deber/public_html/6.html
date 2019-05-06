@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+       <style>
+       #resultado{
+           width: 1500px;
+           height: 1500px;
+       }
+       </style>
+    </head>
+    <body>
+            <button type="button" class="btn btn-primary" id="cal" onclick="ref()">Calcular</button>
+            <textarea class="form-control" id="resultado"  rows="3"></textarea>
+    </body>
+    <script>
+        function ref(){ 
+        var r = " ";
+        var suma=0;
+        
+        for(i=23;i<1000;i=i+23){
+           console.log(i);
+           r += i +"\n";
+           suma =suma + i;
+
+        }
+        var t = "Los multiplos son: \n" + r + "\n"+ "La suma es : " + suma;
+        
+        document.getElementById('resultado').innerHTML = t;
+        }
+    </script>
+</html>

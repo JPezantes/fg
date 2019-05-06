@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+       
+    </head>
+    <body>
+            <form id="eca">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputEmail1">Edad</label>
+                            <input type="text" class="form-control" id="edad" aria-describedby="edad" placeholder="Ingrese su edad">
+                    </div>
+                  
+        </form>
+        <div>
+                <button type="button" class="btn btn-primary" id="cal" onclick="ref()">Calcular</button>
+        </div>
+        <div>
+                <textarea class="form-control" id="resultado"  rows="3"></textarea>
+        </div>
+
+        <script>
+            
+               function ref(){
+             var n = document.getElementById('nombre').value;
+           
+            var e = document.getElementById('edad').value;
+            var r = (e * 365);
+            var texto = n + " " + "has vivido" + " " + r +" "+ "dias" ;
+            document.getElementById('resultado').innerHTML = texto;
+                }
+           
+      
+        </script>
+
+    </body>
+    </html>
